@@ -7,9 +7,6 @@
   <title>PHP Snack 4</title>
 </head>
 <body>
-  <!-- Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno
-  avrà Nome, Cognome e un array contenente i suoi voti scolastici.
-  Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
 
   <?php
     $classe = [
@@ -34,20 +31,15 @@
     ]
    ?>
 
+   <?php for ($i = 0; $i < count($classe) ; $i++) { ?>
 
-   <?php for ($i = 0; $i < count($classe) ; $i++) {
-     ?>
      <div class="">
         <?= $classe[$i]['nome'];?>
         <?=$classe[$i]['cognome'];?> <br>
         <?='La tua media è: ' . array_sum($classe[$i]['voti']) / count($classe[$i]['voti']);?>
      </div>
 
-
-  <?php  }  ?>
-
-
-
+  <?php } ?>
 
 </body>
 </html>
